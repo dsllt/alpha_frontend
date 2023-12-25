@@ -7,6 +7,7 @@ import { MainBodyComponent } from './components/main-body/main-body.component';
 import { MainFooterComponent } from './components/main-footer/main-footer.component';
 import { NewAccountFormComponent } from './components/new-account-form/new-account-form.component';
 import { FormsModule } from '@angular/forms';
+import { AccountHeaderComponent } from './components/account-header/account-header.component';
 
 @Component({
   selector: 'app-root',
@@ -20,6 +21,7 @@ import { FormsModule } from '@angular/forms';
     MainBodyComponent,
     MainFooterComponent,
     NewAccountFormComponent,
+    AccountHeaderComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',

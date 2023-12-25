@@ -27,6 +27,16 @@
     margin-top: 0.5rem;
     margin-bottom: 1rem;
   }
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  input:focus {
+    outline: none;
+  }
 }
 
 .actions {

@@ -1,0 +1,44 @@
+<header class="account-header" *ngIf="router.url.includes('auth')">
+  <nav class="nav-bar">
+    <ul class="list">
+      <li>
+        <a routerLink="auth/home" routerLinkActive="active" class="link">
+          Início
+        </a>
+      </li>
+      <li>
+        <a
+          routerLink="auth/conta-corrente"
+          routerLinkActive="active"
+          class="link"
+        >
+          Conta corrente
+        </a>
+      </li>
+      <li>
+        <a
+          routerLink="auth/transferencias"
+          routerLinkActive="active"
+          class="link"
+        >
+          Transferências</a
+        >
+      </li>
+      <li>
+        <a routerLink="auth/pix" routerLinkActive="active" class="link">
+          PIX
+        </a>
+      </li>
+      <li>
+        <a routerLink="auth/solicitacao" routerLinkActive="active" class="link">
+          Acompanhamento solicitação
+        </a>
+      </li>
+      <li>
+        <a routerLink="auth/perfil" routerLinkActive="active" class="link">
+          Dados da empresa
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
