@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 import { MainBodyComponent } from './components/main-body/main-body.component';
 import { NewAccountFormComponent } from './components/new-account-form/new-account-form.component';
+import { LoginComponent } from './components/login/login.component';
 
 export const routes: Routes = [
   {
@@ -19,5 +20,9 @@ export const routes: Routes = [
   {
     path: 'nova-conta',
     component: NewAccountFormComponent,
+  },
+  {
+    path: 'login',
+    component: LoginComponent,
   },
 ];
