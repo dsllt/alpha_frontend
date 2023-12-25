@@ -19,4 +19,14 @@
 .second-row {
   max-width: 37.5rem;
   margin-top: 1rem;
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+  color: #000;
+}
+
+.active {
+  color: red;
 }
