@@ -8,14 +8,14 @@
       <h3>Faça login na sua conta PJ</h3>
     </div>
     <form [formGroup]="applyForm" (submit)="submitLogin()" class="form">
-      <label for="cnpj">CNPJ</label>
+      <label for="cnpj">E-mail</label>
       <input
         class="input"
-        type="number"
-        id="cnpj"
-        name="cnpj"
-        formControlName="cnpj"
-        placeholder="CNPJ da empresa"
+        type="email"
+        id="email"
+        name="email"
+        formControlName="email"
+        placeholder="Informe o e-mail"
         required
       />
 
@@ -30,9 +30,7 @@
         required
       />
       <div class="actions">
-        <button class="action-button" type="submit" routerLink="/auth/home">
-          Entrar
-        </button>
+        <button class="action-button" type="submit">Entrar</button>
         <button
           class="action-button"
           type="reset"
