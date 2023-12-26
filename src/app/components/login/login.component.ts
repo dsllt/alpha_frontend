@@ -3,6 +3,7 @@ import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { Router, RouterModule } from '@angular/router';
 import { AccountService } from '../account.service';
 import { CommonModule } from '@angular/common';
+import { Login } from '../../interfaces/Login';
 
 @Component({
   selector: 'app-login',
@@ -22,7 +23,7 @@ export class LoginComponent {
   });
 
   async submitLogin() {
-    var clientData = {
+    var clientData: Login = {
       email: this.applyForm!.value.email!,
       password: this.applyForm?.value.password!,
     };
@@ -36,10 +37,5 @@ export class LoginComponent {
       console.log('err', err);
       alert(err);
     }
-  }
-
-  cancelLogin() {
-    console.log('formValues', this.applyForm.value);
-    alert('click');
   }
 }
