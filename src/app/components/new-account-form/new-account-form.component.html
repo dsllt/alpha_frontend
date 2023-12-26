@@ -2,22 +2,26 @@
   <header class="header">
     <h2>Abra sua conta PJ</h2>
   </header>
-  <form>
+  <form [formGroup]="applyForm" (submit)="submitForm()">
     <label for="name">Nome da empresa</label>
     <input
       class="input"
       type="text"
       id="name"
       name="name"
+      formControlName="name"
       placeholder="Nome da empresa"
+      required
     />
     <label for="cnpj">CNPJ da empresa</label>
     <input
       class="input"
-      type="text"
+      type="number"
       id="cnpj"
       name="cnpj"
+      formControlName="cnpj"
       placeholder="CNPJ da empresa"
+      required
     />
     <label for="phone">Telefone</label>
     <input
@@ -25,6 +29,7 @@
       type="tel"
       id="phone"
       name="phone"
+      formControlName="phone"
       placeholder="Telefone do responsável"
     />
     <label for="email">E-mail</label>
@@ -33,7 +38,9 @@
       type="email"
       id="email"
       name="email"
+      formControlName="email"
       placeholder="E-mail do responsável"
+      required
     />
     <label for="address">Endereço</label>
     <input
@@ -41,14 +48,16 @@
       type="text"
       id="address"
       name="address"
+      formControlName="address"
       placeholder="Endereço da empresa"
     />
     <label for="cep">CEP</label>
     <input
       class="input"
-      type="text"
+      type="number"
       id="cep"
       name="cep"
+      formControlName="cep"
       placeholder="CEP da empresa"
     />
     <label for="password">Senha</label>
@@ -57,11 +66,20 @@
       type="password"
       id="password"
       name="password"
+      formControlName="password"
       placeholder="Defina uma nova senha"
+      required
     />
     <div class="actions">
       <button class="action-button" type="submit">Salvar</button>
-      <button class="action-button" type="reset">Cancelar</button>
+      <button
+        class="action-button"
+        type="reset"
+        (click)="cancelForm()"
+        routerLink="/home"
+      >
+        Cancelar
+      </button>
     </div>
   </form>
 </section>
