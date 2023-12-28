@@ -4,12 +4,14 @@ import { HttpClient, HttpHeaders, HttpResponse } from '@angular/common/http';
 import { environment } from '../../environments/environment';
 import { Observable, tap } from 'rxjs';
 import { AccountInfo } from '../interfaces/account-info';
+import { TrackingAccountInfo } from '../interfaces/tracking-account-info';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AccountService {
   private readonly apiUrl = environment.apiUrl;
+
   accountInfo: {
     accountId?: string;
     clientId?: string;
@@ -21,6 +23,12 @@ export class AccountService {
     cep?: string;
     approvalDate?: string;
     requestDate?: string;
+  } = {};
+
+  trackingAccountInfo: {
+    accountId?: string;
+    status?: string;
+    updateDate?: string;
   } = {};
 
   http = inject(HttpClient);
@@ -70,7 +78,21 @@ export class AccountService {
   //   return this.http.post(this.apiUrl + '/account-tracking', status);
   // }
 
-  // accessTrackingAccount() {
-  //   return this.http.get(this.apiUrl + '/account-tracking');
-  // }
+  accessTrackingAccount() {
+    return this.http.get(this.apiUrl + '/account-tracking/').pipe(
+      tap((response) => {
+        this.trackingAccountInfo = response;
+      })
+    );
+  }
+
+  getTrackingAccountInfo(): TrackingAccountInfo {
+    const trackingAccountInfoObject = {
+      accountId: this.trackingAccountInfo.accountId!,
+      status: this.trackingAccountInfo.status!,
+      updateDate: this.trackingAccountInfo.updateDate!,
+    };
+
+    return trackingAccountInfoObject;
+  }
 }
