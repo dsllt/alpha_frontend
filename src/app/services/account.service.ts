@@ -42,18 +42,7 @@ export class AccountService {
   // }
 
   accessAccount() {
-    const token = localStorage.getItem('token');
-    const headerDict = {
-      'Content-Type': 'application/json',
-      Accept: 'application/json',
-      'Access-Control-Allow-Headers': 'Content-Type',
-      Authorization: 'Bearer ' + token,
-    };
-
-    const requestOptions = {
-      headers: new HttpHeaders(headerDict),
-    };
-    return this.http.get(this.apiUrl + '/account/', requestOptions).pipe(
+    return this.http.get(this.apiUrl + '/account/').pipe(
       tap((response) => {
         this.accountInfo = response;
       })
