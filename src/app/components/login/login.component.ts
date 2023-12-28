@@ -1,9 +1,10 @@
 import { Component, inject } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { Router, RouterModule } from '@angular/router';
-import { AccountService } from '../account.service';
 import { CommonModule } from '@angular/common';
-import { Login } from '../../interfaces/Login';
+import { TokenService } from '../../services/token.service';
+import { AuthService } from '../../services/auth.service';
+import { Login } from '../../interfaces/login';
 
 @Component({
   selector: 'app-login',
@@ -15,7 +16,8 @@ import { Login } from '../../interfaces/Login';
 export class LoginComponent {
   constructor(public router: Router) {}
 
-  accountService = inject(AccountService);
+  authService = inject(AuthService);
+  tokenService = inject(TokenService);
 
   applyForm = new FormGroup({
     email: new FormControl('', { nonNullable: true }),
@@ -28,14 +30,9 @@ export class LoginComponent {
       password: this.applyForm?.value.password!,
     };
 
-    try {
-      var response = await this.accountService.authClient(clientData);
-      localStorage.setItem('token', response.access_token);
-      localStorage.setItem('token_expires_in', response.expires_in);
-      this.router.navigate(['/auth/home']);
-    } catch (err) {
-      console.log('err', err);
-      alert(err);
-    }
+    this.authService.auth(clientData).subscribe({
+      error: (e) => alert(e.error),
+      complete: () => this.router.navigate(['/auth/home']),
+    });
   }
 }
