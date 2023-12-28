@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
+import { TokenService } from '../../services/token.service';
 
 @Component({
   selector: 'app-account-header',
@@ -19,5 +20,12 @@ export class AccountHeaderComponent {
     'auth/perfil',
   ];
 
+  tokenService = inject(TokenService);
+
   constructor(public router: Router) {}
+
+  logout(): void {
+    this.tokenService.delete();
+    this.router.navigate(['/home']);
+  }
 }

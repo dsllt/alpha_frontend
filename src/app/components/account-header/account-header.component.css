@@ -22,3 +22,7 @@
 .active {
   color: red;
 }
+
+.logout {
+  cursor: pointer;
+}
