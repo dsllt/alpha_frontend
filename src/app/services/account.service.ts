@@ -1,8 +1,8 @@
 import { Injectable, inject } from '@angular/core';
 import { NewAccount } from '../interfaces/new-account';
-import { HttpClient, HttpHeaders, HttpResponse } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { environment } from '../../environments/environment';
-import { Observable, tap } from 'rxjs';
+import { switchMap, tap } from 'rxjs';
 import { AccountInfo } from '../interfaces/account-info';
 import { TrackingAccountInfo } from '../interfaces/tracking-account-info';
 
@@ -33,21 +33,27 @@ export class AccountService {
 
   http = inject(HttpClient);
 
-  async createClient(clientInfo: NewAccount) {
-    const data = await fetch(this.apiUrl + '/client', {
-      method: 'POST',
-      body: JSON.stringify(clientInfo),
-    });
-    return data;
+  createClient(clientInfo: NewAccount) {
+    return this.http.post(this.apiUrl + '/client/', clientInfo).pipe(
+      switchMap((response: any) => {
+        return this.createAccount(response.id, '');
+      })
+    );
   }
 
   // updateClient(clientInfo: NewAccount) {
   //   return this.http.put<NewAccount>(this.apiUrl + '/client', clientInfo);
   // }
 
-  // createAccount(approvalDate: any) {
-  //   return this.http.post(this.apiUrl + '/account', approvalDate);
-  // }
+  createAccount(clientId: string, approvalDate: any) {
+    return this.http
+      .post(this.apiUrl + '/account/', { clientId, approvalDate })
+      .pipe(
+        switchMap((response: any) => {
+          return this.createTrackingAccount(response.id, 'Em análise');
+        })
+      );
+  }
 
   accessAccount() {
     return this.http.get(this.apiUrl + '/account/').pipe(
@@ -74,9 +80,11 @@ export class AccountService {
     return accountInfoObject;
   }
 
-  // createTrackingAccount(status: String) {
-  //   return this.http.post(this.apiUrl + '/account-tracking', status);
-  // }
+  createTrackingAccount(accountId: string, status: String) {
+    return this.http
+      .post(this.apiUrl + '/account-tracking/', { accountId, status })
+      .pipe(tap(() => {}));
+  }
 
   accessTrackingAccount() {
     return this.http.get(this.apiUrl + '/account-tracking/').pipe(
