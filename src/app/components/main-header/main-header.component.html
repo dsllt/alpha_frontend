@@ -6,28 +6,33 @@
     router.url === '/nova-conta'
   "
 >
-  <div class="first-row">
-    <div></div>
+  <div class="first-column">
     <h1>ALPHA</h1>
-    <a routerLink="login" class="access-account">Acesse sua conta</a>
   </div>
-  <nav class="second-row">
-    <ul class="second-row">
+
+  <nav class="second-column">
+    <ul class="second-column">
       <li>
-        <a routerLink="home" routerLinkActive="active" class="link"
-          >Institucional</a
+        <a routerLink="home" routerLinkActive="active" class="link">Home</a>
+      </li>
+      <li>
+        <a routerLink="solucoes" routerLinkActive="active" class="link"
+          >Para você</a
         >
       </li>
       <li>
         <a routerLink="solucoes" routerLinkActive="active" class="link"
-          >Soluções</a
+          >Para sua empresa</a
         >
       </li>
       <li>
         <a routerLink="nova-conta" routerLinkActive="active" class="link"
-          >Abra conta</a
+          >Abra sua conta</a
         >
       </li>
     </ul>
   </nav>
+  <div class="third-column">
+    <a routerLink="login" class="account-access">Acesse sua conta</a>
+  </div>
 </header>
