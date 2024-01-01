@@ -25,11 +25,7 @@ export class AccountService {
     requestDate?: string;
   } = {};
 
-  trackingAccountInfo: {
-    accountId?: string;
-    status?: string;
-    updateDate?: string;
-  } = {};
+  trackingAccountInfo: TrackingAccountInfo[] = [];
 
   http = inject(HttpClient);
 
@@ -89,18 +85,12 @@ export class AccountService {
   accessTrackingAccount() {
     return this.http.get(this.apiUrl + '/account-tracking/').pipe(
       tap((response) => {
-        this.trackingAccountInfo = response;
+        this.trackingAccountInfo = Object.values(response);
       })
     );
   }
 
-  getTrackingAccountInfo(): TrackingAccountInfo {
-    const trackingAccountInfoObject = {
-      accountId: this.trackingAccountInfo.accountId!,
-      status: this.trackingAccountInfo.status!,
-      updateDate: this.trackingAccountInfo.updateDate!,
-    };
-
-    return trackingAccountInfoObject;
+  getTrackingAccountInfo(): TrackingAccountInfo[] {
+    return this.trackingAccountInfo;
   }
 }
