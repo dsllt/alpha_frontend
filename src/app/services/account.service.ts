@@ -19,8 +19,15 @@ export class AccountService {
     cnpj?: string;
     phone?: string;
     email?: string;
-    address?: string;
-    cep?: string;
+    address?: {
+      street?: string;
+      building?: string;
+      sub_building?: string;
+      city?: string;
+      state?: string;
+      country?: string;
+      cep?: string;
+    };
     approvalDate?: string;
     requestDate?: string;
   } = {};
@@ -67,8 +74,15 @@ export class AccountService {
       cnpj: this.accountInfo.cnpj!,
       phone: this.accountInfo.phone!,
       email: this.accountInfo.email!,
-      address: this.accountInfo.address!,
-      cep: this.accountInfo.cep!,
+      address: {
+        street: this.accountInfo.address!.street,
+        building: this.accountInfo.address!.building,
+        sub_building: this.accountInfo.address!.sub_building,
+        city: this.accountInfo.address!.city,
+        state: this.accountInfo.address!.state,
+        country: this.accountInfo.address!.country,
+        cep: this.accountInfo.address!.cep,
+      },
       approvalDate: this.accountInfo.approvalDate!,
       requestDate: this.accountInfo.requestDate!,
     };

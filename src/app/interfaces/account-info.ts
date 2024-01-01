@@ -5,8 +5,15 @@ export interface AccountInfo {
   cnpj: string;
   phone?: string;
   email: string;
-  address: string;
-  cep?: string;
+  address?: {
+    street?: string;
+    building?: string;
+    sub_building?: string;
+    city?: string;
+    state?: string;
+    country?: string;
+    cep?: string;
+  };
   approvalDate: string;
   requestDate: string;
 }

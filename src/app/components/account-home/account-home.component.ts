@@ -18,8 +18,15 @@ export class AccountHomeComponent {
     cnpj: '',
     phone: '',
     email: '',
-    address: '',
-    cep: '',
+    address: {
+      street: '',
+      building: '',
+      sub_building: '',
+      city: '',
+      state: '',
+      country: '',
+      cep: '',
+    },
     approvalDate: '',
     requestDate: '',
   };
@@ -30,6 +37,7 @@ export class AccountHomeComponent {
       complete: () => {
         const response: AccountInfo = this.accountService.getAccountInfo();
         this.accountInfo = response;
+        console.log('info', this.accountInfo);
       },
     });
   }

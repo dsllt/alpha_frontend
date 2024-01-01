@@ -1,8 +1,145 @@
-<p>PERFIL account-profile works!</p>
+<section class="container">
+  <header class="header">
+    <h2>Dados da sua conta</h2>
+  </header>
+  <form [formGroup]="applyForm" (submit)="submitForm()">
+    <label for="name" class="label">Nome</label>
+    <input
+      class="input"
+      type="text"
+      id="name"
+      name="name"
+      formControlName="name"
+      placeholder="Nome da empresa"
+      [value]="accountInfo.name"
+      required
+    />
+    <label for="cnpj" class="label">CNPJ</label>
+    <input
+      class="input"
+      type="number"
+      id="cnpj"
+      name="cnpj"
+      formControlName="cnpj"
+      placeholder="CNPJ"
+      [value]="accountInfo.cnpj"
+      required
+    />
+    <label for="phone" class="label">Telefone</label>
+    <input
+      class="input"
+      type="tel"
+      id="phone"
+      name="phone"
+      formControlName="phone"
+      [value]="accountInfo.phone"
+      placeholder="Telefone do responsável"
+    />
+    <label for="email" class="label">E-mail</label>
+    <input
+      class="input"
+      type="email"
+      id="email"
+      name="email"
+      formControlName="email"
+      placeholder="E-mail do responsável"
+      [value]="accountInfo.email"
+      required
+    />
+    <div class="address">
+      <div class="div-address">
+        <label for="street" class="label">Logradouro</label>
+        <input
+          class="input-address"
+          type="text"
+          id="street"
+          name="street"
+          formControlName="street"
+          placeholder="Endereço da empresa"
+          [value]="accountInfo.address?.street"
+        />
+      </div>
+      <div>
+        <label for="building" class="label">Número</label>
+        <input
+          class="input"
+          type="text"
+          id="building"
+          name="building"
+          formControlName="building"
+          placeholder="Número"
+          [value]="accountInfo.address?.building"
+        />
+      </div>
+    </div>
+    <div class="address">
+      <div>
+        <label for="sub_building" class="label">Complemento</label>
 
-<div>
-  DADOS de PERFIL
-  <div>NOME: {{ accountInfo.name }}</div>
-  <div>CNPJ: {{ accountInfo.cnpj }}</div>
-  <div>TELEFONE: {{ accountInfo.phone }}</div>
-</div>
+        <input
+          class="input"
+          type="text"
+          id="sub_building"
+          name="sub_building"
+          formControlName="sub_building"
+          placeholder="Complemento"
+          [value]="accountInfo.address?.sub_building"
+        />
+      </div>
+      <div>
+        <label for="cep" class="label">CEP</label>
+
+        <input
+          class="input"
+          type="number"
+          id="cep"
+          name="cep"
+          formControlName="cep"
+          placeholder="CEP"
+          [value]="accountInfo.address?.cep"
+        />
+      </div>
+      <div class="div-address">
+        <label for="city" class="label">Cidade</label>
+        <input
+          class="input-address"
+          type="text"
+          id="city"
+          name="city"
+          formControlName="city"
+          placeholder="Cidade"
+          [value]="accountInfo.address?.city"
+        />
+      </div>
+    </div>
+    <div class="address">
+      <div class="div-address">
+        <label for="state" class="label">Estado</label>
+        <input
+          class="input-address"
+          type="text"
+          id="state"
+          name="state"
+          formControlName="state"
+          placeholder="Estado"
+          [value]="accountInfo.address?.state"
+        />
+      </div>
+      <div class="div-country">
+        <label for="country" class="label">País</label>
+        <input
+          class="input"
+          type="text"
+          id="country"
+          name="country"
+          formControlName="country"
+          placeholder="País"
+          [value]="accountInfo.address?.country"
+        />
+      </div>
+    </div>
+    <div class="actions">
+      <button class="action-button" type="submit">Atualizar</button>
+    </div>
+  </form>
+</section>
