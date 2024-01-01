@@ -18,7 +18,12 @@ export class NewAccountFormComponent {
     cnpj: new FormControl('', { nonNullable: true }),
     phone: new FormControl(''),
     email: new FormControl('', { nonNullable: true }),
-    address: new FormControl(''),
+    street: new FormControl(''),
+    building: new FormControl(''),
+    sub_building: new FormControl(''),
+    city: new FormControl(''),
+    state: new FormControl(''),
+    country: new FormControl(''),
     cep: new FormControl(''),
     password: new FormControl('', { nonNullable: true }),
   });
@@ -31,10 +36,18 @@ export class NewAccountFormComponent {
       cnpj: this.applyForm.value.cnpj!.toString(),
       phone: this.applyForm.value.phone!,
       email: this.applyForm.value.email!,
-      address: this.applyForm.value.address!,
-      cep: this.applyForm.value.cep!.toString(),
+      address: {
+        street: this.applyForm.value.street!,
+        building: this.applyForm.value.building!,
+        sub_building: this.applyForm.value.sub_building!,
+        city: this.applyForm.value.city!,
+        state: this.applyForm.value.state!,
+        country: this.applyForm.value.country!,
+        cep: this.applyForm.value.cep!.toString(),
+      },
       password: this.applyForm.value.password!,
     };
+
     this.accountService.createClient(clientInfo).subscribe({
       error: (e) => {
         console.log(e.error);

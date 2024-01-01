@@ -50,7 +50,7 @@ export class AccountService {
       .post(this.apiUrl + '/account/', { clientId, approvalDate })
       .pipe(
         switchMap((response: any) => {
-          return this.createTrackingAccount(response.id, 'Em análise');
+          return this.createTrackingAccount(response.id, 'AGUARDANDO_ANALISE');
         })
       );
   }
