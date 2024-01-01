@@ -3,7 +3,6 @@
     <h2>Abra sua conta PJ</h2>
   </header>
   <form [formGroup]="applyForm" (submit)="submitForm()">
-    <label for="name">Nome da empresa</label>
     <input
       class="input"
       type="text"
@@ -13,17 +12,15 @@
       placeholder="Nome da empresa"
       required
     />
-    <label for="cnpj">CNPJ da empresa</label>
     <input
       class="input"
       type="number"
       id="cnpj"
       name="cnpj"
       formControlName="cnpj"
-      placeholder="CNPJ da empresa"
+      placeholder="CNPJ"
       required
     />
-    <label for="phone">Telefone</label>
     <input
       class="input"
       type="tel"
@@ -32,7 +29,6 @@
       formControlName="phone"
       placeholder="Telefone do responsável"
     />
-    <label for="email">E-mail</label>
     <input
       class="input"
       type="email"
@@ -42,7 +38,6 @@
       placeholder="E-mail do responsável"
       required
     />
-    <label for="address">Endereço</label>
     <input
       class="input"
       type="text"
@@ -51,23 +46,21 @@
       formControlName="address"
       placeholder="Endereço da empresa"
     />
-    <label for="cep">CEP</label>
     <input
       class="input"
       type="number"
       id="cep"
       name="cep"
       formControlName="cep"
-      placeholder="CEP da empresa"
+      placeholder="CEP"
     />
-    <label for="password">Senha</label>
     <input
       class="input"
       type="password"
       id="password"
       name="password"
       formControlName="password"
-      placeholder="Defina uma nova senha"
+      placeholder="Senha"
       required
     />
     <div class="actions">

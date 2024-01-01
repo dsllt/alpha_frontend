@@ -3,6 +3,11 @@
   align-items: center;
   padding: 1rem 1.5rem;
   justify-content: space-between;
+  background-color: white;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
 
   h1 {
     font-size: 1.5rem;
