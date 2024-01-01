@@ -78,7 +78,6 @@ export class AccountRequestComponent {
           };
           this.trackingAccountInfo.push(formattedStatus);
         });
-        console.log(this.trackingAccountInfo);
       },
     });
   }
