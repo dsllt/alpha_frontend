@@ -34,13 +34,36 @@ form {
   }
 }
 
-.input {
+.input,
+.input-address {
   margin: 0.4rem 0 1rem 0;
   padding: 0.6rem 1rem;
 
   background-color: #f9f9f9;
   border: 1px solid #e5e5e5;
   border-radius: 3px;
+}
+
+.input-address {
+  width: 100%;
+}
+#building {
+  width: 5.2rem;
+}
+
+#sub_building {
+  width: 7.3rem;
+}
+
+#cep {
+  width: 10rem;
+}
+
+.address {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  justify-content: space-between;
 }
 
 .actions {

@@ -38,22 +38,68 @@
       placeholder="E-mail do responsável"
       required
     />
-    <input
-      class="input"
-      type="text"
-      id="address"
-      name="address"
-      formControlName="address"
-      placeholder="Endereço da empresa"
-    />
-    <input
-      class="input"
-      type="number"
-      id="cep"
-      name="cep"
-      formControlName="cep"
-      placeholder="CEP"
-    />
+    <div class="address">
+      <input
+        class="input-address"
+        type="text"
+        id="address"
+        name="address"
+        formControlName="address"
+        placeholder="Endereço da empresa"
+      />
+      <input
+        class="input"
+        type="text"
+        id="building"
+        name="building"
+        formControlName="building"
+        placeholder="Número"
+      />
+    </div>
+    <div class="address">
+      <input
+        class="input"
+        type="text"
+        id="sub_building"
+        name="sub_building"
+        formControlName="sub_building"
+        placeholder="Complemento"
+      />
+      <input
+        class="input"
+        type="number"
+        id="cep"
+        name="cep"
+        formControlName="cep"
+        placeholder="CEP"
+      />
+      <input
+        class="input-address"
+        type="text"
+        id="city"
+        name="city"
+        formControlName="city"
+        placeholder="Cidade"
+      />
+    </div>
+    <div class="address">
+      <input
+        class="input-address"
+        type="text"
+        id="state"
+        name="state"
+        formControlName="state"
+        placeholder="Estado"
+      />
+      <input
+        class="input"
+        type="text"
+        id="Country"
+        name="Country"
+        formControlName="Country"
+        placeholder="País"
+      />
+    </div>
     <input
       class="input"
       type="password"
