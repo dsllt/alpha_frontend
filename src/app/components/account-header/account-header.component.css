@@ -1,17 +1,39 @@
 .account-header {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  padding: 1.5rem;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+
+  h1 {
+    font-size: 1.5rem;
+    margin: 0;
+    font-family: sans-serif;
+  }
+}
+
+.first-column,
+.second-column,
+.third-column {
+  display: flex;
+  font-family: sans-serif;
+}
+
+.third-column {
+  justify-content: end;
 }
 
 .list {
   width: 100%;
   display: flex;
-  justify-content: space-between;
-  max-width: 37.5rem;
-  margin-top: 1rem;
+  gap: 1rem;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .link {
@@ -20,9 +42,20 @@
 }
 
 .active {
-  color: red;
+  color: lightslategray;
+  border-bottom: 1px solid lightslategray;
 }
 
 .logout {
   cursor: pointer;
+  color: white;
+  background: rgb(72, 172, 152);
+  padding: 0.5rem 0.8rem;
+  border-radius: 0.5rem;
+
+  transition: ease-in-out 0.4s;
+}
+
+.logout:hover {
+  opacity: 0.5;
 }

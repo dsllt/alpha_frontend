@@ -1,5 +1,8 @@
 <header class="account-header" *ngIf="router.url.includes('auth')">
-  <nav class="nav-bar">
+  <div class="first-column">
+    <h1>ALPHA</h1>
+  </div>
+  <nav class="second-column">
     <ul class="list">
       <li>
         <a routerLink="auth/home" routerLinkActive="active" class="link">
@@ -39,9 +42,9 @@
           Dados da empresa
         </a>
       </li>
-      <li>
-        <a class="logout" (click)="logout()"> Sair </a>
-      </li>
     </ul>
   </nav>
+  <div class="third-column">
+    <a class="logout" (click)="logout()"> Sair </a>
+  </div>
 </header>
