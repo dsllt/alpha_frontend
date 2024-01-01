@@ -1,40 +1,40 @@
-<section class="container">
-  <div class="logo">
-    <h1>ALPHA</h1>
-  </div>
-  <div class="login">
-    <div class="welcome">
-      <h2>Bem-vindo</h2>
-      <h3>Faça login na sua conta PJ</h3>
+<div class="wrapper">
+  <section class="container">
+    <div class="logo">
+      <h1>ALPHA</h1>
     </div>
-    <form [formGroup]="applyForm" (submit)="submitLogin()" class="form">
-      <label for="cnpj">E-mail</label>
-      <input
-        class="input"
-        type="email"
-        id="email"
-        name="email"
-        formControlName="email"
-        placeholder="Informe o e-mail"
-        required
-      />
-
-      <label for="password">Senha</label>
-      <input
-        class="input"
-        type="password"
-        id="password"
-        name="password"
-        formControlName="password"
-        placeholder="Defina uma nova senha"
-        required
-      />
-      <div class="actions">
-        <button class="action-button" type="submit">Entrar</button>
-        <button class="action-button" type="reset" routerLink="/home">
-          Voltar
-        </button>
+    <div class="login">
+      <div class="welcome">
+        <h2>Bem-vindo</h2>
+        <h3>Faça login na sua conta PJ</h3>
       </div>
-    </form>
-  </div>
-</section>
+      <form [formGroup]="applyForm" (submit)="submitLogin()" class="form">
+        <input
+          class="input"
+          type="email"
+          id="email"
+          name="email"
+          formControlName="email"
+          placeholder="Digite seu e-mail"
+          required
+        />
+
+        <input
+          class="input"
+          type="password"
+          id="password"
+          name="password"
+          formControlName="password"
+          placeholder="Digite sua senha"
+          required
+        />
+        <div class="actions">
+          <button class="action-button" type="submit">Entrar</button>
+          <button class="action-button" type="reset" routerLink="/home">
+            Voltar
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+</div>
