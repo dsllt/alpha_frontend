@@ -1,6 +1,59 @@
-<p>INICIO account-home works!</p>
-<div>
-  Olá,
-  {{ accountInfo.name }}
-  !
+<div class="container">
+  <div class="title">
+    <h1>Olá, {{ accountInfo.name }}</h1>
+  </div>
+  <div class="nav">
+    <h3>Navegue por sua conta</h3>
+    <ul class="list">
+      <li>
+        <a
+          routerLink="auth/conta-corrente"
+          routerLinkActive="active"
+          class="nav-item"
+        >
+          Conta corrente
+        </a>
+      </li>
+      <li>
+        <a
+          routerLink="auth/transferencias"
+          routerLinkActive="active"
+          class="nav-item"
+        >
+          Transferências
+        </a>
+      </li>
+      <li>
+        <a routerLink="auth/pix" routerLinkActive="active" class="nav-item">
+          PIX
+        </a>
+      </li>
+      <li>
+        <a
+          routerLink="auth/solicitacao"
+          routerLinkActive="active"
+          class="nav-item"
+        >
+          Acompanhamento solicitação
+        </a>
+      </li>
+      <li>
+        <a routerLink="auth/perfil" routerLinkActive="active" class="nav-item">
+          Perfil
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="discover">
+    <h3>Descubra mais</h3>
+    <ul class="list">
+      <li>
+        <a class="nav-item"> Contato </a>
+      </li>
+      <li>
+        <a class="nav-item"> Perguntas frequentes </a>
+      </li>
+    </ul>
+  </div>
 </div>
