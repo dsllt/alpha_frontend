@@ -8,6 +8,8 @@ import { AccountTransfersComponent } from './components/account-transfers/accoun
 import { AccountPixComponent } from './components/account-pix/account-pix.component';
 import { AccountRequestComponent } from './components/account-request/account-request.component';
 import { AccountProfileComponent } from './components/account-profile/account-profile.component';
+import { MainSolutionUserComponent } from './components/main-solution-user/main-solution-user.component';
+import { MainSolutionEnterpriseComponent } from './components/main-solution-enterprise/main-solution-enterprise.component';
 
 export const routes: Routes = [
   {
@@ -20,8 +22,12 @@ export const routes: Routes = [
     component: MainBodyComponent,
   },
   {
-    path: 'solucoes',
-    component: MainBodyComponent,
+    path: 'solucoes/pf',
+    component: MainSolutionUserComponent,
+  },
+  {
+    path: 'solucoes/pj',
+    component: MainSolutionEnterpriseComponent,
   },
   {
     path: 'nova-conta',

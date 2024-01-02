@@ -2,7 +2,8 @@
   class="main-header"
   *ngIf="
     router.url === '/home' ||
-    router.url === '/solucoes' ||
+    router.url === '/solucoes/pf' ||
+    router.url === '/solucoes/pj' ||
     router.url === '/nova-conta'
   "
 >
@@ -16,12 +17,12 @@
         <a routerLink="home" routerLinkActive="active" class="link">Home</a>
       </li>
       <li>
-        <a routerLink="solucoes" routerLinkActive="active" class="link"
+        <a routerLink="solucoes/pf" routerLinkActive="active" class="link"
           >Para você</a
         >
       </li>
       <li>
-        <a routerLink="solucoes" routerLinkActive="active" class="link"
+        <a routerLink="solucoes/pj" routerLinkActive="active" class="link"
           >Para sua empresa</a
         >
       </li>
