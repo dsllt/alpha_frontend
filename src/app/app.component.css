@@ -1,0 +1,15 @@
+.main {
+  overflow-y: scroll;
+  height: 100%;
+  position: relative;
+}
+
+.main::-webkit-scrollbar {
+  display: none;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
