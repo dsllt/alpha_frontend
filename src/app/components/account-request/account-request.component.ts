@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { AccountService } from '../../services/account.service';
-import { TrackingAccountInfo } from '../../interfaces/tracking-account-info';
+import { TrackingAccountInfo } from '../../interfaces/tracking-account-info.ts';
 import { CommonModule } from '@angular/common';
 
 @Component({

@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { Router, RouterModule } from '@angular/router';
 import { AccountService } from '../../services/account.service';
-import { NewAccount } from '../../interfaces/new-account';
+import { NewAccount } from '../../interfaces/new-account.ts';
 import { CommonModule } from '@angular/common';
 
 @Component({

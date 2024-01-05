@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { AccountService } from '../../services/account.service';
-import { AccountInfo } from '../../interfaces/account-info';
+import { AccountInfo } from '../../interfaces/account-info.ts';
 
 @Component({
   selector: 'app-account-home',
