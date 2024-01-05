@@ -5,7 +5,7 @@ import { Observable, tap } from 'rxjs';
 import { AuthResponse } from '../interfaces/auth-response';
 import { TokenService } from './token.service';
 import { environment } from '../../environments/environment';
-import { Login } from '../interfaces/login.ts';
+import { Login } from '../interfaces/login';
 
 @Injectable({
   providedIn: 'root',
