@@ -1,14 +1,15 @@
 .container {
+  margin: 0 auto;
+  font-family: sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: start;
-  font-family: sans-serif;
-  padding-top: 3rem;
 
-  margin: 0 auto;
-  margin-bottom: -5rem;
   height: 100%;
+  overflow-y: scroll;
+  padding-top: 3rem;
+  padding-bottom: 10rem;
 }
 
 .box {
@@ -32,6 +33,9 @@
   font-weight: bold;
   margin-bottom: 1rem;
 
+  p:first-child {
+    width: 250px;
+  }
   p:last-child {
     width: 80px;
     text-align: center;

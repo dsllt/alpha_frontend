@@ -1,4 +1,17 @@
 .container {
+  margin: 0 auto;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding-bottom: 8rem;
+  overflow-y: scroll;
+  height: 100%;
+  width: 100%;
+}
+
+.box {
   margin: 2rem auto;
 
   max-width: 38em;
