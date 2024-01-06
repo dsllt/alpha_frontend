@@ -1,124 +1,126 @@
-<section class="container">
-  <header class="header">
-    <h2>Abra sua conta PJ</h2>
-  </header>
-  <form [formGroup]="applyForm" (submit)="submitForm()">
-    <input
-      class="input"
-      type="text"
-      id="name"
-      name="name"
-      formControlName="name"
-      placeholder="Nome da empresa"
-      required
-    />
-    <input
-      class="input"
-      type="number"
-      id="cnpj"
-      name="cnpj"
-      formControlName="cnpj"
-      placeholder="CNPJ"
-      required
-    />
-    <input
-      class="input"
-      type="tel"
-      id="phone"
-      name="phone"
-      formControlName="phone"
-      placeholder="Telefone do responsável"
-    />
-    <input
-      class="input"
-      type="email"
-      id="email"
-      name="email"
-      formControlName="email"
-      placeholder="E-mail do responsável"
-      required
-    />
-    <div class="address">
-      <input
-        class="input-address"
-        type="text"
-        id="street"
-        name="street"
-        formControlName="street"
-        placeholder="Endereço da empresa"
-      />
+<div class="container">
+  <section class="box">
+    <header class="header">
+      <h2>Abra sua conta PJ</h2>
+    </header>
+    <form [formGroup]="applyForm" (submit)="submitForm()">
       <input
         class="input"
         type="text"
-        id="building"
-        name="building"
-        formControlName="building"
-        placeholder="Número"
-      />
-    </div>
-    <div class="address">
-      <input
-        class="input"
-        type="text"
-        id="sub_building"
-        name="sub_building"
-        formControlName="sub_building"
-        placeholder="Complemento"
+        id="name"
+        name="name"
+        formControlName="name"
+        placeholder="Nome da empresa"
+        required
       />
       <input
         class="input"
         type="number"
-        id="cep"
-        name="cep"
-        formControlName="cep"
-        placeholder="CEP"
-      />
-      <input
-        class="input-address"
-        type="text"
-        id="city"
-        name="city"
-        formControlName="city"
-        placeholder="Cidade"
-      />
-    </div>
-    <div class="address">
-      <input
-        class="input-address"
-        type="text"
-        id="state"
-        name="state"
-        formControlName="state"
-        placeholder="Estado"
+        id="cnpj"
+        name="cnpj"
+        formControlName="cnpj"
+        placeholder="CNPJ"
+        required
       />
       <input
         class="input"
-        type="text"
-        id="country"
-        name="country"
-        formControlName="country"
-        placeholder="País"
+        type="tel"
+        id="phone"
+        name="phone"
+        formControlName="phone"
+        placeholder="Telefone do responsável"
       />
-    </div>
-    <input
-      class="input"
-      type="password"
-      id="password"
-      name="password"
-      formControlName="password"
-      placeholder="Senha"
-      required
-    />
-    <div class="actions">
-      <button class="action-button" type="submit">Salvar</button>
-      <button
-        class="action-button"
-        type="reset"
-        (click)="cancelForm()"
-        routerLink="/home"
-      >
-        Cancelar
-      </button>
-    </div>
-  </form>
-</section>
+      <input
+        class="input"
+        type="email"
+        id="email"
+        name="email"
+        formControlName="email"
+        placeholder="E-mail do responsável"
+        required
+      />
+      <div class="address">
+        <input
+          class="input-address"
+          type="text"
+          id="street"
+          name="street"
+          formControlName="street"
+          placeholder="Endereço da empresa"
+        />
+        <input
+          class="input"
+          type="text"
+          id="building"
+          name="building"
+          formControlName="building"
+          placeholder="Número"
+        />
+      </div>
+      <div class="address">
+        <input
+          class="input"
+          type="text"
+          id="sub_building"
+          name="sub_building"
+          formControlName="sub_building"
+          placeholder="Complemento"
+        />
+        <input
+          class="input"
+          type="number"
+          id="cep"
+          name="cep"
+          formControlName="cep"
+          placeholder="CEP"
+        />
+        <input
+          class="input-address"
+          type="text"
+          id="city"
+          name="city"
+          formControlName="city"
+          placeholder="Cidade"
+        />
+      </div>
+      <div class="address">
+        <input
+          class="input-address"
+          type="text"
+          id="state"
+          name="state"
+          formControlName="state"
+          placeholder="Estado"
+        />
+        <input
+          class="input"
+          type="text"
+          id="country"
+          name="country"
+          formControlName="country"
+          placeholder="País"
+        />
+      </div>
+      <input
+        class="input"
+        type="password"
+        id="password"
+        name="password"
+        formControlName="password"
+        placeholder="Senha"
+        required
+      />
+      <div class="actions">
+        <button class="action-button" type="submit">Salvar</button>
+        <button
+          class="action-button"
+          type="reset"
+          (click)="cancelForm()"
+          routerLink="/home"
+        >
+          Cancelar
+        </button>
+      </div>
+    </form>
+  </section>
+</div>
