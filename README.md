@@ -1,27 +1,66 @@
-# UnicredFrontend
+# ALPHA frontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.5.
+Esta aplicação foi desenvolvida como parte de um desafio técnico, buscando implementar um portal web com procesos simplificado para a abertura de conta, proporcionando uma experiência web amigável e facilitada.<br>
+Com uma navegação intuitiva, a plataforma implementa um formulário para a coleta de informações essenciais, tornando o preenchimento de dados uma tarefa simples e rápida. <br>
+Além disso, para manter os usuários informados em cada etapa do processo, é implementada uma funcionalidade que permite acompanhar em tempo real a solicitação de abertura de conta.
+<br>
 
-## Development server
+## Estrutura de Pasta
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+📦 root<br>
+┣ 📂 app<br>
+┃ ┣ 📂 components<br>
+┃ ┣ 📂 helpers<br>
+┃ ┣ 📂 interfaces<br>
+┃ ┣ 📂 services<br>
+┃ ┣ 📜 app.component.css<br>
+┃ ┣ 📜 app.component.ts<br>
+┃ ┣ 📜 app.config.ts<br>
+┃ ┗ 📜 app.routes.ts<br>
+┣ 📂 assets<br>
+┣ 📂 environments<br>
+┣ 📜 index.html<br>
+┣ 📜 main.ts<br>
+┗ 📜 styles.css<br>
 
-## Code scaffolding
+# Instalação
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```bash
+# Instalar o Angular 17
 
-## Build
+# Clonar o projeto e acessar a pasta do projeto
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+# Fazer o download das dependências de projeto
+  npm install
 
-## Running unit tests
+# Inicializar o projeto
+  npm run start
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```bash
+# O projeto pode ser rodado por completo locamente fazendo download da API
 
-## Running end-to-end tests
+# Para logar com um usuário já cadastrado e com informações de acompanhamento de conta
+  email: test@test.com
+  senha: 1234
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## 🚀 Tecnologias
 
-## Further help
+No desenvolvimento deste projeto foram usadas as seguintes tecnologias:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- Angular
+- Typescript
+
+<br>
+
+## 📚 Packages and Libraries
+
+- [moment](https://www.npmjs.com/package/moment)
+- [rxjs](https://www.npmjs.com/package/rxjs)
+
+<br>
+
+## 📚 Author
+
+<a href="https://www.linkedin.com/in/dayanesallet/" target="_blank"><img align="left" src="https://raw.githubusercontent.com/yushi1007/yushi1007/main/images/linkedin.svg" alt="" width="21px"/></a>
