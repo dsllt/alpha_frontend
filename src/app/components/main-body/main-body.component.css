@@ -89,13 +89,18 @@
     margin-bottom: 3rem;
   }
 }
-.new-account-img {
+
+.image {
   height: 350px;
   width: 600px;
-  object-fit: cover;
   position: absolute;
   left: 0;
   top: 0;
+
+  background-image: url("../../../assets/open-account.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .button {
